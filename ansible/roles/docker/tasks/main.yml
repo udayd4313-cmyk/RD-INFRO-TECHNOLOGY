@@ -1,0 +1,9 @@
+- name: Install Docker prerequisites
+  ansible.builtin.apt:
+    name: [ca-certificates, curl, docker.io, docker-compose-plugin]
+    state: present
+    update_cache: true
+- name: Enable Docker
+  ansible.builtin.service: {name: docker, state: started, enabled: true}
+- name: Add remote user to Docker group
+  ansible.builtin.user: {name: "{{ ansible_user }}", groups: docker, append: true}

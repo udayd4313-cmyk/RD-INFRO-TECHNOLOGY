@@ -1,0 +1,7 @@
+- name: Provision and deploy Student API
+  hosts: app
+  become: true
+  roles:
+    - docker
+    - kubernetes
+    - flask

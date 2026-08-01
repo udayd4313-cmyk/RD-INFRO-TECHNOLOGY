@@ -1,0 +1,14 @@
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.venv/
+.env
+secret.yaml
+backups/
+data/
+*.db
+.terraform/
+terraform.tfstate*
+*.tfvars
+.vscode/
+coverage.xml

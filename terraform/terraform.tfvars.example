@@ -1,0 +1,2 @@
+ami_id = "ami-xxxxxxxxxxxxxxxxx"
+admin_cidr_blocks = ["203.0.113.10/32"]

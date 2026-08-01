@@ -1,0 +1,5 @@
+- name: Copy application
+  ansible.builtin.copy: {src: "{{ playbook_dir }}/../", dest: /opt/student-api/, mode: "0755"}
+- name: Apply Kubernetes manifests
+  ansible.builtin.command: kubectl apply -k /opt/student-api/kubernetes
+  changed_when: true
